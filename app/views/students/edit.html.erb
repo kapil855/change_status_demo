@@ -1,0 +1,33 @@
+<h1>Students#edit</h1>
+<h3>Student</h3>
+<%= form_with model: @student do |form| %>
+  <div>
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+  <div>
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+  <div>
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+  <div>
+    <%= form.label :contact %>
+    <%= form.text_field :contact %>
+  </div>
+  <div>
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+  <div>
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+  <div>
+    <%= form.label :gender %>
+    <%= form.select :gender, options_for_select(Student::GENDER), prompt: "Select gender" %>
+  </div>
+  <%= form.submit %>
+<% end %>
